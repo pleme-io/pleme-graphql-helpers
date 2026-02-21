@@ -21,8 +21,8 @@ thiserror = "1.0"
 uuid = { version = "1.6", features = ["serde", "v4"] }
 base64 = "0.22"
 chrono = { version = "0.4", features = ["serde"] }
-pleme-rbac = { git = "https://github.com/pleme-io/pleme-rbac" }
-pleme-error = { git = "https://github.com/pleme-io/pleme-error", optional = true }
+pleme-rbac = { version = "0.1" }
+pleme-error = { version = "0.1", optional = true }
 
 [dev-dependencies]
 tokio-test = "0.4"
