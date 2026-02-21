@@ -1,0 +1,33 @@
+[package]
+name = "pleme-graphql-helpers"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "GraphQL utilities library for Pleme platform - schema helpers, federation, pagination"
+repository = "https://github.com/pleme-io/pleme-graphql-helpers"
+homepage = "https://github.com/pleme-io/pleme-graphql-helpers"
+readme = "README.md"
+
+[dependencies]
+async-graphql = { version = "7.0", features = ["dataloader"] }
+axum = { version = "0.8.7", features = ["http1", "http2", "json", "query", "tokio"] }
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+uuid = { version = "1.6", features = ["serde", "v4"] }
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
+pleme-rbac = { git = "https://github.com/pleme-io/pleme-rbac" }
+pleme-error = { git = "https://github.com/pleme-io/pleme-error", optional = true }
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[features]
+default = []
+errors = ["pleme-error"]
+full = ["errors"]
+
+
